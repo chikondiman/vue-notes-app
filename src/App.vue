@@ -4,7 +4,8 @@
     <note-container />
   </div>
 </template>
-	<script>
+
+<script>
 import Toolbar from "./components/Toolbar.vue";
 import NoteContainer from "./components/NoteContainer.vue";
 export default {
@@ -15,7 +16,8 @@ export default {
   },
 };
 </script>
-	<style>
+
+<style>
 /* RESET */
 * {
   margin: 0;
