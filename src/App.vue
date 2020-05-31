@@ -1,11 +1,13 @@
 <template>
   <div id="app">
     <toolbar />
+    <multiselect v-model="value" :options="options"></multiselect>
     <note-container />
   </div>
 </template>
 
 <script>
+import Multiselect from "vue-multiselect";
 import Toolbar from "./components/Toolbar.vue";
 import NoteContainer from "./components/NoteContainer.vue";
 export default {
@@ -13,11 +15,21 @@ export default {
   components: {
     Toolbar,
     NoteContainer,
+    components: { Multiselect },
+  },
+  data() {
+    return {
+      value: null,
+      options: ["list", "of", "options"],
+    };
   },
 };
+//
 </script>
 
 <style>
+src="vue-multiselect/dist/vue-multiselect.min.css"
+
 /* RESET */
 * {
   margin: 0;
@@ -77,7 +89,7 @@ export default {
   background-color: #fafaf8;
 }
 .toolbar {
-  background-color: #dcdadc;
+  background-color: ##fffff;
 }
 .toolbar-button {
   background-color: #ffffff;
